@@ -3,6 +3,19 @@ from src.sortMethods import selectionSort
 
 # Use python -m unittest .\src\unitTests\selectionSortTest.py to run
 class TestSelectionSort(unittest.TestCase):
+    # Test for arrays holding non-integers (testing util file)
+    def test_non_int(self):
+        self.assertEqual(selectionSort.sort(['a', False, 'b']), 
+                                            ['a', False, 'b'])
+
+    # Test for arrays holding non-integers and integers (testing util file)
+    def test_non_int_and_int(self):
+        self.assertEqual(selectionSort.sort([1,'a',False,'b']), 
+                                            [1,'a',False,'b'])
+        self.assertEqual(selectionSort.sort(['a',False,1,'b']), 
+                                            ['a',False,1,'b'])
+
+    # Tests for selection sort
     # Test for empty array
     def test_sort_null(self):
         self.assertEqual(selectionSort.sort([]), [])
