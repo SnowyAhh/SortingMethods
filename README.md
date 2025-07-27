@@ -16,8 +16,8 @@
 
 ## To do:
 <ul>
-    <li>Selection sort</li>
     <li>Bubble sort</li>
+    <li>Early termination bubble sort</li>
     <li>Insertion sort</li>
     <li>Topological sort</li>
     <li>Merge sort</li>
@@ -30,10 +30,13 @@
 ### Selection sort
 <div>
     <p>
-        Complexity: O(n) writes and O(n^2) reads
+        <b>Complexity:</b>
     </p>
     <p>
-        Stability: Not stable
+        n swaps and n^2 comparisons regardless of case, therefore, O(n^2) complexity
+    </p>
+    <p>
+        <b>Stability:</b> Not stable
     </p>
     <ul>
         <li>Brute force</li>
@@ -57,12 +60,75 @@
 </div>
 
 ### Bubble sort
+<div>
+    <p>
+        <b>Complexity:</b>
+    </p>
+    <ul>
+        <li>
+            Best case (already sorted): n^2/2 comparisons and 0 swaps, therefore O(n^2)
+        </li>
+        <li>
+            Average case (in a random order): n^2/2 comparisons and n^2/2 swaps, therefore O(n^2) 
+        </li>
+        <li>
+            Worst case (Reverse order): n^2/2 comparisons and n^2/2 swaps, therefore O(n^2)
+        </li>
+    </ul>
+    <p>
+        <b>Stability:</b> Stable
+    </p>
+    <ul>
+        <li>Brute force</li>
+        <li>Needs a minimal of n - 1 swaps</li>
+    </ul>
+</div>
+<div>
+    <b>Steps:</b>
+    <ol>
+        <li>
+            Compare first element with the next element in the array, swapping them if the next element is smaller. Continue swapping until the algorithm reaches the end of the array. Now the largest element is at the end of the list
+        </li>
+        <li>
+            Repeat the first step but until the second-last element of the array and so on, with each iteration stopping one element before. Stop only when all of the elements have been sorted
+        </li>
+    </ol>
+</div>
+
+### Early Termination Bubble sort
+<div>
+    <p>
+        <b>Complexity:</b>
+    </p>
+    <ul>
+        <li>
+            Best case (already sorted): n - 1 comparisons and 0 swaps, therefore O(n)
+        </li>
+        <li>
+            Average case (in a random order): Depends on the data set, but only a few would be able to terminate early. The complexity would be lower than regular bubble sort, but the complexity is still likely to be O(n^2) 
+        </li>
+        <li>
+            Worst case (Reverse order): The same as regular bubble sort; n^2/2 comparisons and n^2/2 swaps, therefore O(n^2)
+        </li>
+    </ul>
+    <p>
+        <b>Stability:</b> Stable
+    </p>
+    <ul>
+        <li>Brute force</li>
+        <li>
+            Similar to bubble sort, but if no swaps are made, then break the loop
+        </li>
+    </ul>
+</div>
+
 ### Insertion sort
 ### Topological sort
 <div>
     <p>
         (Using source removal method)
     </p>
+    <p>Using matrix, and using list</p>
 </div>
 
 ### Merge sort
